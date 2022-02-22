@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'calculator';
+    src: url("../fontes/Calculator.ttf") format('truetype');
+
+}
+body{
+    background-image: url('../imagem.jpeg');
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+h1{
+    text-align: center;
+    font-family: 'calculator';
+    font-size: 70px;
+}
+main{
+    border: 1px solid black;
+    margin: auto;
+    padding: 50px;
+    background-color: white;
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.568);
+    max-width: 800px;
+}
+.numeros{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#txtn1, #txtn2{
+    margin-right: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+#soma, #subtrair, #multiplicar, #dividir{
+    margin-right: 50px;
+    margin-bottom: 30px;
+    padding: 12px;
+    border-radius: 5px;
+}
+#soma{
+    background-color: rgb(98, 255, 98)
+}
+#subtrair{
+    background-color: rgb(255, 97, 97);
+}
+#multiplicar{
+    background-color: rgb(255, 255, 102);
+}
+#dividir{
+    background-color: rgb(119, 119, 255);
+}
+#res{
+    text-align: center;
+    margin-left: -50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+}

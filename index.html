@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <h1>Calculadora simples</h1>
+    
+        
+        
+        <main>
+            
+                <div class="numeros">
+                    <input type="number" name="txtn1" id="txtn1" placeholder="Digite o primeiro número">
+                    <input type="number" name="txtn2" id="txtn2" placeholder="Digite o segundo número">
+                </div>
+                <div class="botoes">
+                    <input type="button" value="Somar" id="soma">
+                    <input type="button" value="Subtrair" id="subtrair">
+                    <input type="button" value="Multiplicar" id="multiplicar">
+                    <input type="button" value="Dividir" id="dividir">
+                </div>
+                <div id="res"></div>
+        </main>
+        
+    
+
+    <script>
+        var btnsoma = window.document.getElementById('soma')
+        var btnsub = window.document.getElementById('subtrair')
+        var btnmulti = window.document.getElementById('multiplicar')
+        var btndividi = window.document.getElementById('dividir')
+        
+        btnsoma.addEventListener('click', clicar)
+        btnsub.addEventListener('click', sub)
+        btnmulti.addEventListener('click', multipli)
+        btndividi.addEventListener('click', divid)
+
+            var aparece = document.getElementById('res')
+            var n1 = document.getElementById('txtn1')
+            var n2 = document.getElementById('txtn2')
+            var numero1 = Number(n1.value)
+            var numero2 = Number(n2.value)
+        function clicar(){
+          
+            var numero1 = Number(n1.value)
+            var numero2 = Number(n2.value)
+            var resultado = numero1 + numero2
+            aparece.innerHTML = `o resultado da soma entre ${numero1} e ${numero2} é: ${resultado}`
+        }
+        function sub(){
+            var numero1 = Number(n1.value)
+            var numero2 = Number(n2.value)
+            var resultado = numero1 - numero2
+            aparece.innerHTML = `o resultado da subtração entre ${numero1} e ${numero2} é: ${resultado}`
+        }
+        function multipli(){
+            var numero1 = Number(n1.value)
+            var numero2 = Number(n2.value)
+            var resultado = numero1 * numero2
+            aparece.innerHTML = `o resultado da multiplicação entre ${numero1} e ${numero2} é: ${resultado}`
+        }
+        function divid(){
+            var numero1 = Number(n1.value)
+            var numero2 = Number(n2.value)
+            var resultado = numero1 / numero2
+            aparece.innerHTML = `o resultado da divisão entre ${numero1} e ${numero2} é: ${resultado}`
+        }
+    </script>
+</body>
+</html>
